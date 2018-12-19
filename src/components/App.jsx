@@ -1,94 +1,129 @@
-import React, { Component } from 'react';
-import { Container, Header, } from 'semantic-ui-react'
-import { Welcome, VehicleChoose, CarForm, BoatForm, BoatDetail, Confirm } from './Registration/Steps';
-import { states } from './Registration/States';
-import { StateMachine } from './Registration/StateMachine';
+import React, {Component} from 'react';
+import Video from './Video/Video';
+import Map from './States/Map';
+import Question from './States/Map';
+import Steps from './Navigation/Steps';
+import Button from './Button/Button'
+import Registration from './States/Registration';
+import Welcome from './States/Welcome';
 
-class App extends Component {
-    constructor(props) {
-        super(props);
+
+class MainForm extends Component {
+    constructor() {
+        super();
         this.state = {
-            currentState: states.WELCOME,
-            vehicleType: null,
-            vehicles: []
-        };
-        this._next = this._next.bind(this);
-        this._back = this._back.bind(this);
-        this._saveVehicle = this._saveVehicle.bind(this);
-        this.stateMachine = new StateMachine();
-    }
-
-    _saveVehicle(vehicle) {
-        let vehicles = this.state.vehicles.concat();
-        vehicles.push(vehicle);
-        this.setState({
-            vehicles: vehicles
-        });
-    }
-
-    _next(desiredState) {
-        let currentState = this.state.currentState;
-        let nextState = this.stateMachine.transitionTo(currentState, desiredState);
-        this.setState({
-            currentState: nextState
-        });
-    }
-
-    _back(desiredState) {
-        let currentState = this.state.currentState;
-        this.setState({
-            currentState: this.stateMachine.transitionFrom(currentState, desiredState)
-        });
-    }
-
-    /*
-     * Just a note -- you'll see the _next and _back functions
-     * get passed around to child components alot. This is not
-     * a very good practice, and in the real-world it would be
-     * better to use a library like redux to handle application
-     * state.
-     */
-    _currentStep() {
-        switch(this.state.currentState) {
-            case states.WELCOME:
-                return(<Welcome next={this._next}/>);
-            case states.VEHICLE_CHOOSE:
-                return(<VehicleChoose
-                    back={this._back}
-                    next={this._next}/>);
-            case states.CAR:
-                return(<CarForm
-                    saveForm={this._saveVehicle}
-                    back={this._back}
-                    next={this._next} />);
-            case states.BOAT:
-                return(<BoatForm
-                    saveForm={this._saveVehicle}
-                    back={this._back}
-                    next={this._next} />);
-            case states.BOAT_DETAIL:
-                return(<BoatDetail
-                    back={this._back}
-                    next={this._next} />);
-            case states.CONFIRM:
-                return(<Confirm
-                    vehicles={this.state.vehicles}
-                    back={this._back}
-                    next={this._next} />);
-            default:
-                return(<Welcome next={this._next}/>);
+            values: {
+                name: '',
+                years: '',
+                city: ''
+            },
+            errors: {
+                step: 1,
+                name: false,
+                years: false,
+                city: false
+            },
+            activeStep: 1,
+            isDisablePrevBtn: true,
+            isDisableNextBtn: true
         }
     }
+
+    onChange = e => {
+        const name = e.target.name;
+        const value = e.target.value;
+        this.setState(prevState => ({
+            values: {...prevState.values, [name]: value}
+        }));
+        console.log(e.target.name, e.target.value, e.target.checked)
+    };
+    validateFields = () => {
+        const errors = {};
+        if (this.state.activeStep === 1) {
+            if (this.state.values.name.length < 5) {
+                errors.firstName = "Must be more then 4 characters";
+            }
+            if (this.state.values.years.length < 2) {
+                errors.lastName = "Must be more then 2 characters";
+            }
+            if (this.state.values.city.length < 5) {
+                errors.lastName = "Must be more then 4 characters";
+            }
+
+        }
+        return errors;
+    };
+    onChangeStep = name => event => {
+        event.preventDefault();
+        const {activeStep} = this.state;
+        if (name === "Previous" && activeStep > 1) {
+            this.setState(
+                {activeStep: activeStep - 1}
+            );
+        }
+        if (name === "Next" && activeStep < 5) {
+            const errors = this.validateFields();
+            if (Object.keys(errors).length > 0) {
+                this.setState(
+                    {errors}
+                );
+            } else {
+                this.setState({
+                    activeStep: activeStep + 1,
+                    errors: {}
+                });
+            }
+        }
+    };
+
+
     render() {
+        const { activeStep, values, errors} = this.state;
         return (
-            <div>
-                <Container text>
-                    <Header as='h2'>Acme Insurance Quotes</Header>
-                    {this._currentStep()}
-                </Container>
+            <div className="form-container card">
+                <form className="form card-body">
+                    <Steps activeStep={activeStep}/>
+                    {activeStep === 1 ? (
+                        <Welcome
+                            onChange={this.onChange}
+                            values={values}
+                        />
+                    ) : null}
+                    {activeStep === 2 ? (
+                        <Video
+                            onChange={this.onChange}
+                            values={values}
+                        />
+                    ) : null}
+                    {activeStep === 3 ? (
+                        <Question
+                            error={errors}
+                            onChange={this.onChange}
+                            img={values}
+                        />
+                    ) : null}
+                    {activeStep === 4 ? (
+                        <Registration
+                            errors={errors}
+                            onChange={this.onChange}
+                            values={values}
+                        />
+                    ) : null}
+                    {activeStep === 5 ? (
+                        <Map
+                            onChange={this.onChange}
+                        />
+
+                    ) : null}
+
+                    <Button
+                        onChangeStep={this.onChangeStep}
+                        activeStep = {this.activeStep}
+                    />
+                </form>
             </div>
         );
     }
 }
 
-export default App;
+export default MainForm;

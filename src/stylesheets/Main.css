@@ -2,21 +2,20 @@
     text-align: center;
 }
 
-.App-logo {
+.Main-logo {
     animation: App-logo-bounce infinite 2s linear;
     height: 40vmin;
     padding: 20px 0;
     align-items: center;
 }
 
-.App-header {
+.Main-header {
     background-color: white;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(-11px + 16vmin);
+    font-size: calc(-37px + 13vmin);
     color: #960018;
     font-family: cursive;
 }
@@ -33,7 +32,7 @@
 
     border-radius: 1.3rem;
 }
-@keyframes App-logo-bounce {
+@keyframes Main-logo-bounce {
     0%, 100% {
         transform: translateY(0);
     }
