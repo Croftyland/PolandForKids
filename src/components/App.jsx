@@ -54,6 +54,7 @@ class MainForm extends Component {
         return errors;
     };
     onChangeStep = name => event => {
+
         event.preventDefault();
         const {activeStep} = this.state;
         if (name === "Previous" && activeStep > 1) {
@@ -62,6 +63,7 @@ class MainForm extends Component {
             );
         }
         if (name === "Next" && activeStep < 5) {
+            console.log('clicked')
             const errors = this.validateFields();
             if (Object.keys(errors).length > 0) {
                 this.setState(
@@ -78,7 +80,7 @@ class MainForm extends Component {
 
 
     render() {
-        const { activeStep, values, errors} = this.state;
+        const {activeStep, values, errors} = this.state;
         return (
             <div className="form-container card">
                 <form className="form card-body">
@@ -87,12 +89,14 @@ class MainForm extends Component {
                         <Welcome
                             onChange={this.onChange}
                             values={values}
+                            errors={errors}
                         />
                     ) : null}
                     {activeStep === 2 ? (
                         <Video
                             onChange={this.onChange}
                             values={values}
+                            errors={errors}
                         />
                     ) : null}
                     {activeStep === 3 ? (
@@ -112,13 +116,14 @@ class MainForm extends Component {
                     {activeStep === 5 ? (
                         <Map
                             onChange={this.onChange}
+                            errors={errors}
                         />
 
                     ) : null}
 
                     <Button
                         onChangeStep={this.onChangeStep}
-                        activeStep = {this.activeStep}
+                        activeStep={this.activeStep}
                     />
                 </form>
             </div>

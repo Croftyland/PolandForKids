@@ -7,12 +7,12 @@ export default class Welcome extends React.Component {
     render() {
         return (
             <Grid>
-                <div className="Main">
-                    <header className="Main-header">
+                <div className="Welcome">
+                    <header className="Welcome-header">
                         <p>
                             Mały Polak w sieci
                         </p>
-                        <img src={logo} className="Main-logo" alt="logo"/>
+                        <img src={logo} className="Welcome-logo" alt="logo"/>
                     </header>
                 </div>
             </Grid>
