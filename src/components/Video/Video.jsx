@@ -1,15 +1,17 @@
-import React  from 'react';
-import { Player } from 'video-react';
+import React, {Component} from 'react'
+import ReactPlayer from 'react-player'
 
-
-export default class Video extends React.Component{
+export default class Video extends Component {
     render() {
-        return (
-            <Player
-                playsInline
-                poster="/assets/poster.png"
-                src="https://www.youtube.com/embed/Ro51SuLyh8A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        return <div className='player-wrapper'>
+            <ReactPlayer
+                url='https://www.youtube.com/watch?v=plug6OIrxRM'
+                className='react-player'
+                playing
+                width='100%'
+                height='100%'
             />
-        );
+        </div>
     }
-};
+}
+
