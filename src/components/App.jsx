@@ -64,17 +64,18 @@ class MainForm extends Component {
         }
         if (name === "Next" && activeStep < 5) {
             console.log('clicked')
-            const errors = this.validateFields();
-            if (Object.keys(errors).length > 0) {
-                this.setState(
-                    {errors}
-                );
-            } else {
-                this.setState({
-                    activeStep: activeStep + 1,
-                    errors: {}
-                });
-            }
+            this.setState({
+                activeStep: activeStep + 1,
+                errors: {}
+            });
+            // const errors = this.validateFields();
+            // if (Object.keys(errors).length > 0) {
+            //     this.setState(
+            //         {errors}
+            //     );
+            // } else {}
+
+
         }
     };
 
