@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Video from './Video/Video';
 import Map from './States/Map';
-import Question from './States/Map';
+import Question from './States/Question';
 import Steps from './Navigation/Steps';
 import Button from './Button/Button'
 import Registration from './States/Registration';
