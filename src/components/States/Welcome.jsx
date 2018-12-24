@@ -1,6 +1,6 @@
 import React from 'react';
 import {Grid} from 'semantic-ui-react';
-import logo from "../../polishLogo.jpg";
+import logo from "../../Photo/polishLogo.jpg";
 
 
 export default class Welcome extends React.Component {

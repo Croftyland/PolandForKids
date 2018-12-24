@@ -60,3 +60,8 @@
     top: 0;
     left: 0;
 }
+
+.map {
+    background-repeat: no-repeat;
+    background-position: right top;
+}
