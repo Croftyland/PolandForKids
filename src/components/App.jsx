@@ -87,7 +87,7 @@ class MainForm extends Component {
                 <form className="form card-body">
                     <Steps activeStep={activeStep}/>
                     {activeStep === 1 ? (
-                        <Map
+                        <Welcome
                             onChange={this.onChange}
                             values={values}
                             errors={errors}
