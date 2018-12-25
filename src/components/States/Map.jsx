@@ -1,32 +1,36 @@
 import React from 'react';
-import {Grid} from 'semantic-ui-react';
-import map from "../../Photo/map.jpg";
-import bream from "../../Photo/bream.png"
-import seal from "../../Photo/seal.png"
-import aurochs from "../../Photo/aurochs.png"
-import deer from "../../Photo/deer.png"
-import bear from "../../Photo/bear.png"
-import fox from "../../Photo/fox.png"
-import eagle from "../../Photo/eagle.png"
+import Bream from '../Animals/Bream'
+import Seal from "../Animals/Seal";
+import Aurochs from "../Animals/Aurochs";
+import Deer from "../Animals/Deer";
+import Bear from "../Animals/Bear";
+import Fox from "../Animals/Fox";
+import Eagle from "../Animals/Eagle";
 
+import map from "../../Photo/map.jpg";
 
 export default class Map extends React.Component {
+
+
     render() {
         return (
-            <Grid>
+
                 <div className="Welcome">
                     <header className="Welcome-header">
                         <img src={map} className="map" alt="map"/>
-                        <img src={bream} className="bream" alt="bream"/>
-                        <img src={seal} className="seal" alt="seal"/>
-                        <img src={aurochs} className="aurochs" alt="aurochs"/>
-                        <img src={deer} className="deer" alt="deer"/>
-                        <img src={bear} className="bear" alt="bear"/>
-                        <img src={fox} className="fox" alt="fox"/>
-                        <img src={eagle} className="eagle" alt="eagle"/>
+                        <Bream/>
+                        <Seal/>
+                        <Aurochs/>
+                        <Deer/>
+                        <Bear/>
+                        <Fox/>
+                        <Eagle/>
                     </header>
                 </div>
-            </Grid>
         );
+
     }
-    }
+}
+
+
+

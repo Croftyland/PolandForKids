@@ -36,6 +36,7 @@
 
     border-radius: 1.3rem;
 }
+
 @keyframes Welcome-logo-bounce {
     0%, 100% {
         transform: translateY(0);
@@ -65,3 +66,61 @@
     background-repeat: no-repeat;
     background-position: right top;
 }
+
+.bream {
+    position: absolute;
+    top: 389px;
+    right: 846px;
+    width: 203px;
+    height: auto;
+}
+
+.seal {
+    position: absolute;
+    top: 89px;
+    left: 665px;
+    width: 277px;
+    height: auto;
+}
+
+.aurochs {
+    position: absolute;
+    top: 120px;
+    right: 502px;
+    width: 277px;
+    height: auto;
+}
+
+.deer {
+    position: absolute;
+    top: 376px;
+    right: 625px;
+    width: 153px;
+    height: auto;
+}
+
+.bear {
+    position: absolute;
+    bottom: 170px;
+    right: 625px;
+    width: 218px;
+    height: auto;
+}
+
+.fox {
+    position: absolute;
+    bottom: 314px;
+    left: 593px;
+    width: 217px;
+    height: auto;
+}
+
+
+.eagle {
+    position: absolute;
+    top: 258px;
+    left: 489px;
+    width: 254px;
+    height: auto;
+}
+
