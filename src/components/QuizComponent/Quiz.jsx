@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Question extends React.Component {
+class Quiz extends React.Component {
 
     constructor(props){
         super(props);
@@ -85,4 +85,4 @@ class Question extends React.Component {
     }
 }
 
-export default Question;
+export default Quiz;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from "../../Photo/polishLogo.jpg";
+import logo from "../../images/polishLogo.jpg";
 
 
 export default class Welcome extends React.Component {
