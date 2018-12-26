@@ -2,17 +2,17 @@ import React from 'react';
 
 class Quiz extends React.Component {
 
-    constructor(props){
-        super(props);
-
-    }
+    // constructor(props){
+    //     super(props);
+    //
+    // }
     render(){
         return (
             <div>
 
                 {/* Header - start */}
                 <header>
-                    <img src="https://ihatetomatoes.net/react-tutorials/abc-quiz/images/plane.svg" />
+                    <img src="https://ihatetomatoes.net/react-tutorials/abc-quiz/images/plane.svg" alt="empty" />
                 </header>
                 {/* Header - end */}
 
@@ -72,10 +72,10 @@ class Quiz extends React.Component {
                 {/* Navigation - start */}
                 <div className={`navigation text-center is-active`}>
                     <button className={`arrow`}>
-                        <img src="https://ihatetomatoes.net/react-tutorials/abc-quiz/fonts/navigation-left-arrow.svg" />
+                        <img src="https://ihatetomatoes.net/react-tutorials/abc-quiz/fonts/navigation-left-arrow.svg" alt="empty"/>
                     </button>
                     <button disabled className={`arrow is-disabled`}>
-                        <img src="https://ihatetomatoes.net/react-tutorials/abc-quiz/fonts/navigation-right-arrow.svg" />
+                        <img src="https://ihatetomatoes.net/react-tutorials/abc-quiz/fonts/navigation-right-arrow.svg" alt="empty" />
                     </button>
                 </div>
                 {/* Navigation - end */}

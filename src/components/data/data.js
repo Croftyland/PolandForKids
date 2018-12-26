@@ -61,6 +61,7 @@ const data = {
 export default data;
 
 
+//https://api.myjson.com/bins/9oqz8
 
 
 
@@ -68,10 +69,3 @@ export default data;
 
 
 
-
-
-//
-// W Zakopanem znajdują się:
-//     Góry
-// Morze
-// Najwięcej jezior w kraju

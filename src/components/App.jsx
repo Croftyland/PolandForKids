@@ -100,13 +100,13 @@ class MainForm extends Component {
                             errors={errors}
                         />
                     ) : null}
-                    {activeStep === 3 ? (
-                        <Question
+                    {/* {activeStep === 3 ? (
+                         <Question
                             error={errors}
                             onChange={this.onChange}
                             img={values}
-                        />
-                    ) : null}
+
+                    ) : null}/>*/}
                     {activeStep === 4 ? (
                         <Registration
                             errors={errors}
