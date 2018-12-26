@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-import bear from "../../Photo/bear.png";
+import bear from "../../images/bear.png";
 
 
 class Bear extends React.Component {

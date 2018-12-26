@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-import aurochs from "../../Photo/aurochs.png";
+import aurochs from "../../images/aurochs.png";
 
 
 class Aurochs extends React.Component {

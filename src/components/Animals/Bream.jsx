@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-import bream from "../../Photo/bream.png";
+import bream from "../../images/bream.png";
 
 
 class Bream extends React.Component {

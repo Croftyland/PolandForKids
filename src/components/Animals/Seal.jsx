@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-import seal from "../../Photo/seal.png";
+import seal from "../../images/seal.png";
 
 
 class Seal extends React.Component {

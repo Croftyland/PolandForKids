@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-import eagle from "../../Photo/eagle.png";
+import eagle from "../../images/eagle.png";
 
 class Eagle extends React.Component {
     constructor(props) {

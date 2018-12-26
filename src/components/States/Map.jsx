@@ -7,7 +7,7 @@ import Bear from "../Animals/Bear";
 import Fox from "../Animals/Fox";
 import Eagle from "../Animals/Eagle";
 
-import map from "../../Photo/map.jpg";
+import map from "../../images/map.jpg";
 
 export default class Map extends React.Component {
 
