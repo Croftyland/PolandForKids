@@ -81,6 +81,7 @@ header {
         background-size: 248px 248px;
     }
 }
+/* Class that shows the preloading screen */
 .is-loading-results {
     .results-overlay {
         transform: scaleY(1);
@@ -180,7 +181,7 @@ header {
             color: $darkTextColor;
         }
     }
-    &.is-selected {
+    &.is-highlighted {
         animation-name: highlight;
         animation-duration: 500ms;
     }

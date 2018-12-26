@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Video from './Video/Video';
 import Map from './States/Map';
-import Question from './States/Question';
+import Quiz from './States/Quiz';
 import Steps from './Navigation/Steps';
 import Button from './Button/Button'
 import Registration from './States/Registration';
@@ -87,7 +87,7 @@ class MainForm extends Component {
                 <form className="form card-body">
                     <Steps activeStep={activeStep}/>
                     {activeStep === 1 ? (
-                        <Welcome
+                        <Quiz
                             onChange={this.onChange}
                             values={values}
                             errors={errors}
@@ -100,13 +100,13 @@ class MainForm extends Component {
                             errors={errors}
                         />
                     ) : null}
-                    {/* {activeStep === 3 ? (
-                         <Question
+                     {activeStep === 3 ? (
+                         <Quiz
                             error={errors}
                             onChange={this.onChange}
                             img={values}
-
-                    ) : null}/>*/}
+                         />
+                    ) : null}
                     {activeStep === 4 ? (
                         <Registration
                             errors={errors}

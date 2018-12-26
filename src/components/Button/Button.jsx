@@ -1,9 +1,9 @@
 import React from "react";
 
-export default class Button extends React.Component {
-    render() {
-        const { activeStep, onChangeStep } = this.props;
 
+class Button extends React.Component {
+    render() {
+        const {activeStep, onChangeStep} = this.props;
         return (
             <React.Fragment>
                 {activeStep !== 5 && (
@@ -30,3 +30,5 @@ export default class Button extends React.Component {
         );
     }
 }
+
+export default Button;

@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import "./stylesheets/index.css";
-import "./stylesheets/Main.css"
+import "./stylesheets/Main.css";
+import "./scss/app.scss";
 import App from './components/App';
+import { AppContainer } from 'react-hot-loader';
 import "bootstrap/dist/css/bootstrap.min.css";
 import registerServiceWorker from './components/registerServiceWorker.js';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const rootEl = document.getElementById('root');
+const render = Component =>
+    ReactDOM.render(
+        <AppContainer>
+            <Component />
+        </AppContainer>,
+        rootEl
+    );
+
+render(App);
+if (module.hot) module.hot.accept('./components/App', () => render(App));
 registerServiceWorker();
 
 
