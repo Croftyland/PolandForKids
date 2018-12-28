@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 const Answers = ({allAnswers, allQuestions}) => {
     return (
         <ol>
-            <li>What is the best city in the world? <br /><strong>Melbourne</strong></li>
+            {
+                allQuestions.map((question, index) => {
+                    return <li key={question.question}>{question.question} <br /><strong>{allAnswers[index]}</strong></li>
+                })
+            }
         </ol>
     );
 };

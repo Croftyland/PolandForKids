@@ -5,7 +5,6 @@ import Results from '../QuizComponent/Results';
 
 class Quiz extends React.Component {
 
-
     constructor(props){
         super(props);
 
@@ -64,6 +63,10 @@ class Quiz extends React.Component {
 
     }
 
+    onLoadResults = () => {
+        console.log('Loading results!');
+    }
+
     render(){
         const {currentQuestion, loadNewQuestion, showResults, allAnswers, allQuestions} = this.state;
         return (
@@ -98,6 +101,7 @@ class Quiz extends React.Component {
                             loadNewQuestion={loadNewQuestion}
                             allAnswers={allAnswers}
                             allQuestions={allQuestions}
+                            onLoadResults={this.onLoadResults}
                         />
                     }
 
