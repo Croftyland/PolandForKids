@@ -9,25 +9,67 @@ class Quiz extends React.Component {
 
         this.state = {
             allQuestions: data.allQuestions,
-            currentQuestion: data.allQuestions[4],
+            currentQuestion: data.allQuestions[0],
             progress: 0,
-            allAnswers: []
+            allAnswers: [],
+            loadNewQuestion: false,
+            showResults: false
         }
 
     }
 
     onSelectAnswer = (answer) => {
-        console.log('Answer selected '+answer);
+        //console.log('Answer selected '+answer);
+
+        const {allAnswers} = this.state;
+
+        this.setState({
+            allAnswers: [...allAnswers, answer]
+        }, this.goToNextQuestion())
+
+    }
+
+    goToNextQuestion = () => {
+        //console.log('go to next question after the state is updated');
+
+        const {progress, allQuestions} = this.state;
+
+        this.setState({
+            loadNewQuestion: true
+        })
+
+        // we have the question faded out
+        setTimeout(()=> {
+
+            if(progress < allQuestions.length-1){
+
+                this.setState({
+                    progress: progress+1,
+                    currentQuestion: allQuestions[progress+1],
+                    loadNewQuestion: false
+                })
+
+            } else {
+
+                this.setState({
+                    loadNewQuestion: false,
+                    showResults: true
+                })
+
+            }
+
+        }, 300)
+
     }
 
     render(){
-        const {currentQuestion} = this.state;
+        const {currentQuestion, loadNewQuestion, showResults} = this.state;
         return (
             <div>
 
                 {/* Header - start */}
                 <header>
-                    <img src="https://ihatetomatoes.net/react-tutorials/abc-quiz/images/plane.svg" />
+                    <img className={`fade-out ${loadNewQuestion ? 'fade-out-active' : ''}`} src="https://ihatetomatoes.net/react-tutorials/abc-quiz/images/plane.svg" />
                 </header>
                 {/* Header - end */}
 
@@ -45,10 +87,13 @@ class Quiz extends React.Component {
                     </div>
                     {/* Progress - end */}
 
-                    <Question
-                        currentQuestion={currentQuestion}
-                        onSelectAnswer={this.onSelectAnswer}
-                    />
+                    {
+                        !showResults && <Question
+                            currentQuestion={currentQuestion}
+                            onSelectAnswer={this.onSelectAnswer}
+                            loadNewQuestion={loadNewQuestion}
+                        />
+                    }
 
                     {/* Results - start */}
                     <div className="results">
