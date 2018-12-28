@@ -1,8 +1,10 @@
 import React from 'react';
 import data from '../data/data';
 import Question from '../QuizComponent/Question'
+import Results from '../QuizComponent/Results';
 
 class Quiz extends React.Component {
+
 
     constructor(props){
         super(props);
@@ -63,7 +65,7 @@ class Quiz extends React.Component {
     }
 
     render(){
-        const {currentQuestion, loadNewQuestion, showResults} = this.state;
+        const {currentQuestion, loadNewQuestion, showResults, allAnswers, allQuestions} = this.state;
         return (
             <div>
 
@@ -88,28 +90,16 @@ class Quiz extends React.Component {
                     {/* Progress - end */}
 
                     {
-                        !showResults && <Question
+                        !showResults ? <Question
                             currentQuestion={currentQuestion}
                             onSelectAnswer={this.onSelectAnswer}
                             loadNewQuestion={loadNewQuestion}
+                        /> : <Results
+                            loadNewQuestion={loadNewQuestion}
+                            allAnswers={allAnswers}
+                            allQuestions={allQuestions}
                         />
                     }
-
-                    {/* Results - start */}
-                    <div className="results">
-                        <div className="loader"><div className="icon"></div></div>
-                        <div className="results-overlay"></div>
-                        <h1>Here are your answers:</h1>
-                        <div className="answers">
-                            <ol>
-                                <li>What is the best city in the world? <br /><strong>Melbourne</strong></li>
-                            </ol>
-                        </div>
-                        <div className="text-center">
-                            <button className="btn btn-dark">Submit</button>
-                        </div>
-                    </div>
-                    {/* Results - end */}
 
                 </div>
                 {/* Content - end */}
@@ -126,6 +116,7 @@ class Quiz extends React.Component {
                 {/* Navigation - end */}
 
             </div>
+
         )
     }
 }
