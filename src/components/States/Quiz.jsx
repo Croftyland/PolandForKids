@@ -14,7 +14,8 @@ class Quiz extends React.Component {
             progress: 0,
             allAnswers: [],
             loadNewQuestion: false,
-            showResults: false
+            showResults: false,
+            loadingResults: false
         }
 
     }
@@ -65,12 +66,47 @@ class Quiz extends React.Component {
 
     onLoadResults = () => {
         console.log('Loading results!');
+
+        this.setState({
+            loadingResults: true
+        })
+
+        // correct answers url https://api.myjson.com/bins/zgpjb
+
+        fetch('https://api.myjson.com/bins/zgpjb')
+            .then(response => response.json())
+            .then(parsedJSON => {
+                //console.log(parsedJSON.correctAnswers);
+                const correctAnswers = parsedJSON.correctAnswers;
+
+                this.setState({
+                    correctAnswers,
+                    loadingResults: false,
+                    resultsLoaded: true
+                })
+
+            })
+            .catch(error => {
+                //console.log('fetching failed', error);
+                this.setState({
+                    loadingResults: false,
+                    resultsLoaded: true
+                })
+            })
+
+        // // fake delay
+        // setTimeout(()=> {
+        //   this.setState({
+        //     loadingResults: false
+        //   })
+        // }, 1000)
+
     }
 
     render(){
-        const {currentQuestion, loadNewQuestion, showResults, allAnswers, allQuestions} = this.state;
+        const {currentQuestion, loadNewQuestion, showResults, allAnswers, allQuestions, loadingResults} = this.state;
         return (
-            <div>
+            <div className={`${loadingResults ? 'is-loading-results' : ''}`}>
 
                 {/* Header - start */}
                 <header>
@@ -120,7 +156,6 @@ class Quiz extends React.Component {
                 {/* Navigation - end */}
 
             </div>
-
         )
     }
 }
