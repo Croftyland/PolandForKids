@@ -15,7 +15,8 @@ class Quiz extends React.Component {
             allAnswers: [],
             loadNewQuestion: false,
             showResults: false,
-            loadingResults: false
+            loadingResults: false,
+            correctAnswers: null
         }
 
     }
@@ -104,9 +105,9 @@ class Quiz extends React.Component {
     }
 
     render(){
-        const {currentQuestion, loadNewQuestion, showResults, allAnswers, allQuestions, loadingResults} = this.state;
+        const {currentQuestion, loadNewQuestion, showResults, allAnswers, allQuestions, loadingResults, correctAnswers, resultsLoaded} = this.state;
         return (
-            <div className={`${loadingResults ? 'is-loading-results' : ''}`}>
+            <div className={`${loadingResults ? 'is-loading-results' : ''} ${resultsLoaded ? 'is-showing-results' : 'no-results-loaded'}`}>
 
                 {/* Header - start */}
                 <header>
@@ -138,6 +139,7 @@ class Quiz extends React.Component {
                             allAnswers={allAnswers}
                             allQuestions={allQuestions}
                             onLoadResults={this.onLoadResults}
+                            correctAnswers={correctAnswers}
                         />
                     }
 
