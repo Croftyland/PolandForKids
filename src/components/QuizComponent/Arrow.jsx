@@ -14,7 +14,6 @@ const Arrow = ({direction, progress, allAnswers, goToPreviousQuestion, goToNextQ
             direction === 'left' ? goToPreviousQuestion() : goToNextQuestion();
         }}>
             <img src={image} />
-            {direction}
         </button>
     );
 };

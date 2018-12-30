@@ -1,8 +1,8 @@
 import React from 'react';
 import data from '../data/data';
-import Question from '../QuizComponent/Question'
+import Question from '../QuizComponent/Question';
 import Results from '../QuizComponent/Results';
-import Progress from '../QuizComponent/Progress'
+import Progress from '../QuizComponent/Progress';
 import Arrow from '../QuizComponent/Arrow'
 
 class Quiz extends React.Component {
@@ -26,11 +26,26 @@ class Quiz extends React.Component {
     onSelectAnswer = (answer) => {
         //console.log('Answer selected '+answer);
 
-        const {allAnswers} = this.state;
+        const {allAnswers, progress} = this.state;
+        const currentAnswer = allAnswers[progress];
 
-        this.setState({
-            allAnswers: [...allAnswers, answer]
-        }, this.goToNextQuestion())
+        if(currentAnswer){
+
+            // replace it
+            allAnswers[progress] = answer;
+            this.setState({
+                allAnswers
+            }, this.goToNextQuestion())
+
+        } else {
+
+            // add answer to the array
+            this.setState({
+                allAnswers: [...allAnswers, answer]
+            }, this.goToNextQuestion())
+
+        }
+
 
     }
 
@@ -70,7 +85,7 @@ class Quiz extends React.Component {
     goToPreviousQuestion = () => {
         //console.log('go to previous question after the state is updated');
 
-        const {progress, allQuestions} = this.state;
+        const {progress, allQuestions, showResults} = this.state;
 
         this.setState({
             loadNewQuestion: true
@@ -78,10 +93,15 @@ class Quiz extends React.Component {
 
         setTimeout(() => {
 
-            this.setState({
+            (progress > 0 && !showResults) && this.setState({
                 progress: progress-1,
                 loadNewQuestion: false,
                 currentQuestion: allQuestions[progress-1]
+            })
+
+            showResults && this.setState({
+                showResults: false,
+                loadNewQuestion: false
             })
 
         }, 300)
