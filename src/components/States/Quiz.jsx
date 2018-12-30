@@ -3,6 +3,7 @@ import data from '../data/data';
 import Question from '../QuizComponent/Question'
 import Results from '../QuizComponent/Results';
 import Progress from '../QuizComponent/Progress'
+import Arrow from '../QuizComponent/Arrow'
 
 class Quiz extends React.Component {
 
@@ -106,7 +107,10 @@ class Quiz extends React.Component {
     }
 
     render(){
-        const {currentQuestion, loadNewQuestion, showResults, allAnswers, allQuestions, loadingResults, correctAnswers, resultsLoaded} = this.state;
+        const {currentQuestion, loadNewQuestion, showResults, allAnswers, allQuestions, loadingResults, correctAnswers, resultsLoaded, progress} = this.state;
+
+        const navIsActive = allAnswers.length > 0;
+
         return (
             <div className={`${loadingResults ? 'is-loading-results' : ''} ${resultsLoaded ? 'is-showing-results' : 'no-results-loaded'}`}>
 
@@ -139,13 +143,17 @@ class Quiz extends React.Component {
                 {/* Content - end */}
 
                 {/* Navigation - start - is-active makes it visible */}
-                <div className={`navigation text-center`}>
-                    <button className={`arrow`}>
-                        <img src="https://ihatetomatoes.net/react-tutorials/abc-quiz/fonts/navigation-left-arrow.svg" />
-                    </button>
-                    <button disabled className={`arrow is-disabled`}>
-                        <img src="https://ihatetomatoes.net/react-tutorials/abc-quiz/fonts/navigation-right-arrow.svg" />
-                    </button>
+                <div className={`navigation text-center ${navIsActive ? 'is-active' : ''}`}>
+                    <Arrow
+                        direction="left"
+                        progress={progress}
+                        allAnswers={allAnswers}
+                    />
+                    <Arrow
+                        direction="right"
+                        progress={progress}
+                        allAnswers={allAnswers}
+                    />
                 </div>
                 {/* Navigation - end */}
 
