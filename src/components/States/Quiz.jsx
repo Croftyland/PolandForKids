@@ -117,7 +117,7 @@ class Quiz extends React.Component {
 
         // correct answers url https://api.myjson.com/bins/zgpjb
 
-        fetch('https://api.myjson.com/bins/zgpjb')
+        fetch('https://api.myjson.com/bins/9oqz8')
             .then(response => response.json())
             .then(parsedJSON => {
                 //console.log(parsedJSON.correctAnswers);
