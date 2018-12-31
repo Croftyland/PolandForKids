@@ -5,6 +5,7 @@ import Results from '../QuizComponent/Results';
 import Progress from '../QuizComponent/Progress';
 import Arrow from '../QuizComponent/Arrow'
 
+
 class Quiz extends React.Component {
 
     constructor(props){
