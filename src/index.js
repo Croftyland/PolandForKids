@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./stylesheets/index.css";
 import "./stylesheets/Main.css";
 import "./scss/app.scss";
 import App from './components/App';
+// import Quiz from './components/States/Quiz';
 import { AppContainer } from 'react-hot-loader';
-import "bootstrap/dist/css/bootstrap.min.css";
 import registerServiceWorker from './components/registerServiceWorker.js';
 
 const rootEl = document.getElementById('root');
@@ -18,7 +19,9 @@ const render = Component =>
     );
 
 render(App);
+// render(Quiz);
 if (module.hot) module.hot.accept('./components/App', () => render(App));
+ReactDOM.render(<App />, document.getElementById("root"));
 registerServiceWorker();
 
 
