@@ -8,6 +8,7 @@ import Registration from './States/Registration';
 import Welcome from './States/Welcome';
 
 
+
 class MainForm extends Component {
     constructor() {
         super();
@@ -87,7 +88,7 @@ class MainForm extends Component {
                 <form className="form card-body">
                     <Steps activeStep={activeStep}/>
                     {activeStep === 1 ? (
-                        <Quiz
+                        <Registration
                             onChange={this.onChange}
                             values={values}
                             errors={errors}
