@@ -2,19 +2,17 @@ import React, { Component } from 'react';
 import {
     Container, Col, Form,
     FormGroup, Label, Input,
-    Button,
 } from 'reactstrap';
-import '../../stylesheets/Main.css';
 
 class Registration extends Component {
     render() {
         return (
             <Container className="Registration">
-                <h2>Przedstaw się! Wpisz lub powiedz na głos</h2>
+                <h2 className="Present">Przedstaw się! Wpisz lub powiedz na głos</h2>
                 <Form className="form">
                     <Col>
-                        <FormGroup>
-                            <Label for="exampleName">>Jak się nazywasz?</Label>
+                        <FormGroup className="inputLine">
+                            <Label for="exampleName">Jak się nazywasz?</Label>
                             <Input
                                 type="name"
                                 name="name"
@@ -24,8 +22,8 @@ class Registration extends Component {
                         </FormGroup>
                     </Col>
                     <Col>
-                        <FormGroup>
-                            <Label for="exampleYears">Ile masz lat?</Label>
+                        <FormGroup className="inputLine">
+                            <Label  for="exampleYears">Ile masz lat?</Label>
                             <Input
                                 type="years"
                                 name="years"
@@ -36,7 +34,7 @@ class Registration extends Component {
 
                     </Col>
                     <Col>
-                        <FormGroup>
+                        <FormGroup className="inputLine">
                             <Label for="exampleCity">W jakim mieście mieszkasz?</Label>
                             <Input
                                 type="city"
