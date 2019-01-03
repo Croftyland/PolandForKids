@@ -157,8 +157,8 @@ class Quiz extends React.Component {
             <div className={`${loadingResults ? 'is-loading-results' : ''} ${resultsLoaded ? 'is-showing-results' : 'no-results-loaded'}`}>
 
                 {/* Header - start */}
-                <header>
-                    <img className={`fade-out ${loadNewQuestion ? 'fade-out-active' : ''}`} src="https://ihatetomatoes.net/react-tutorials/abc-quiz/images/plane.svg" />
+                <header className= {`headerQuiz`}>
+                    <img className={`fade-out ${loadNewQuestion ? 'fade-out-active' : ''}`} src="https://www.svgrepo.com/show/269652/navigational-polish.svg" />
                 </header>
                 {/* Header - end */}
 

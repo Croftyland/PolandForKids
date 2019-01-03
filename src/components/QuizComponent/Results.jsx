@@ -7,7 +7,7 @@ const Results = ({loadNewQuestion, allAnswers, allQuestions, onLoadResults, corr
         <div className={`results fade-out ${loadNewQuestion ? 'fade-out-active' : ''}`}>
             <div className="loader"><div className="icon"></div></div>
             <div className="results-overlay"></div>
-            <h1>Here are your answers:</h1>
+            <h1>Oto twoje odpowiedzi:</h1>
             <div className="answers">
                 <Answers
                     allAnswers={allAnswers}
@@ -16,9 +16,9 @@ const Results = ({loadNewQuestion, allAnswers, allQuestions, onLoadResults, corr
                 />
             </div>
             <div className="text-center">
-                <button className="btn btn-dark" onClick={(e) => {
+                <button type="button" className="btn btn-dark" onClick={(e) => {
                     onLoadResults();
-                }}>Submit</button>
+                }}>Zatwierdź</button>
             </div>
         </div>
     );

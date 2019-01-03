@@ -27,7 +27,7 @@ class NiceButton extends Component {
     render() {
         const {choice, index, onSelectAnswer} = this.props;
         return (
-            <button ref={(input) => this.button = input} className={`btn btn-huge ${this.selected ? 'is-selected' : ''}`} onClick={(e) => {
+            <button type="button" ref={(input) => this.button = input} className={`btn btn-huge ${this.selected ? 'is-selected' : ''}`} onClick={(e) => {
                 this.handleClick(e)
             }}><span className="letter">{this.getLetter(index)}</span> {choice}</button>
         );

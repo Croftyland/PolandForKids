@@ -10,7 +10,7 @@ const Arrow = ({direction, progress, allAnswers, goToPreviousQuestion, goToNextQ
         (direction === 'right' && !allAnswers[progress]) // the question hasn't been answered yet
     ;
     return (
-        <button disabled={isDisabled} className={`arrow ${isDisabled ? 'is-disabled' : ''}`} onClick={() => {
+        <button type="button" disabled={isDisabled} className={`arrow ${isDisabled ? 'is-disabled' : ''}`} onClick={() => {
             direction === 'left' ? goToPreviousQuestion() : goToNextQuestion();
         }}>
             <img src={image} />
