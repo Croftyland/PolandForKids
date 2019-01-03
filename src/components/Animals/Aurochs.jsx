@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import Box from './Box'
+import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 
 import aurochs from "../../images/aurochs.png";
 
@@ -8,15 +9,24 @@ class Aurochs extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            modal: false
+            modal: false,
+            show: true
         };
 
         this.toggle = this.toggle.bind(this);
+        this.toggleDiv = this.toggleDiv.bind(this)
+    }
+
+
+    toggleDiv = () => {
+        const {show} = this.state;
+        this.setState({show: !show})
     }
 
     toggle() {
         this.setState({
-            modal: !this.state.modal
+            modal: !this.state.modal,
+            fadeIn: !this.state.fadeIn
         });
     }
 
@@ -27,11 +37,16 @@ class Aurochs extends React.Component {
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
                     <ModalBody>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <div>
+                            <br />
+                            <button onClick={ this.toggleDiv }><img src={aurochs}/></button>
+                            <br /><br />
+                            { this.state.show && <Box /> }
+                        </div>
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-                        <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+                        <Button color="secondary" onClick={this.toggle}>
+                            Wyjść</Button>
                     </ModalFooter>
                 </Modal>
             </div>
