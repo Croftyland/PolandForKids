@@ -14,7 +14,7 @@ class Button extends React.Component {
                             className="mr-2 ml-2 btn btn-light"
                             onClick={activeStep !== 1 ? onChangeStep("Previous") : undefined}
                         >
-                            Previous
+                            Poprzedni
                         </button>
                         <button
                             type="button"
@@ -22,7 +22,7 @@ class Button extends React.Component {
                             onClick={activeStep !== 5 ? onChangeStep("Next") : undefined}
 
                         >
-                            Next
+                            Kolejny
                         </button>
                     </div>
                 )}

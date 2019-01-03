@@ -5,11 +5,11 @@ class Steps extends React.Component {
         const { activeStep } = this.props;
         return (
             <div className="steps mb-4 d-flex justify-content-around">
-                <Step id={1} nameStep="Welcome" activeStep={activeStep} />
-                <Step id={2} nameStep="Video" activeStep={activeStep} />
-                <Step id={3} nameStep="Question" activeStep={activeStep} />
-                <Step id={4} nameStep="Registration" activeStep={activeStep} />
-                <Step id={5} nameStep="Map" activeStep={activeStep} />
+                <Step id={1} nameStep="Witamy" activeStep={activeStep} />
+                <Step id={2} nameStep="Wideo" activeStep={activeStep} />
+                <Step id={3} nameStep="Pytanie" activeStep={activeStep} />
+                <Step id={4} nameStep="Przedstawiamy" activeStep={activeStep} />
+                <Step id={5} nameStep="Mapa" activeStep={activeStep} />
             </div>
         );
     }

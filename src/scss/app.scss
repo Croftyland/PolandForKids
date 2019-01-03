@@ -12,17 +12,18 @@ h1 {
     margin-bottom: 38px;
     color: $darkTextColor;
 }
-header {
+.headerQuiz {
     margin-bottom: 50px;
     text-align: center;
     position: relative;
     min-height: 90px;
     img {
-        max-width: 120px;
-        position: absolute;
+        max-width: 250px;
+        position: relative;
         top: auto;
         bottom: 0;
-        left: 50%;
+        left: 8%;
+        -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
     }
 }
@@ -218,6 +219,8 @@ header {
         visibility: hidden;
     }
 }
+
+
 .answers {
     font-size: 18px;
     li {
@@ -328,9 +331,9 @@ header {
         padding-top: 40px;
         margin-bottom: 60px;
         min-height:210px;
-        img {
-            min-width: 235px;
-        }
+        //img {
+        //    min-width: 235px;
+        //}
     }
     h1 {
         font-size: 36px;
