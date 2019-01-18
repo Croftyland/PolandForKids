@@ -15,22 +15,19 @@ export default class Map extends React.Component {
     render() {
         return (
 
-                <div className="Welcome">
-                    <header className="Welcome-header">
-                        <img src={map} className="map" alt="map"/>
-                        <Bream/>
-                        <Seal/>
-                        <Aurochs/>
-                        <Deer/>
-                        <Bear/>
-                        <Fox/>
-                        <Eagle/>
-                    </header>
-                </div>
+            <div className="Welcome">
+                <header className="Welcome-header">
+                    <img src={map} className="map" alt="map"/>
+                    <Bream/>
+                    <Seal/>
+                    <Aurochs/>
+                    <Deer/>
+                    <Bear/>
+                    <Fox/>
+                    <Eagle/>
+                </header>
+            </div>
         );
 
     }
 }
-
-
-

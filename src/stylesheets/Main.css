@@ -248,3 +248,19 @@ label {
 .step.is-completed:not(:first-child):before {
     background: #4b4668;
 }
+
+.modal-content {
+    width: 150%;
+}
+
+.aurochsToggle{
+    width: 200px
+}
+
+.rulerToggle{
+    width: 200px
+}
+
+.movieToggle{
+    width: 200px
+}

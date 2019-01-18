@@ -1,8 +1,17 @@
 import React from 'react';
 import Box from './Box'
-import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import {Button,
+    Modal,
+    ModalHeader,
+    ModalBody,
+    ModalFooter,
+    Nav, NavItem,
+    NavLink as TabNavLink,} from 'reactstrap';
+
+import { NavLink } from "react-router-dom";
 
 import aurochs from "../../images/aurochs.png";
+import ruler   from "../../images/ruler.jpg"
 
 
 class Aurochs extends React.Component {
@@ -14,11 +23,21 @@ class Aurochs extends React.Component {
         };
 
         this.toggle = this.toggle.bind(this);
-        this.toggleDiv = this.toggleDiv.bind(this)
+        this.toggleDiv1 = this.toggleDiv1.bind(this)
+        this.toggleDiv2 = this.toggleDiv2.bind(this)
+        this.toggleDiv3 = this.toggleDiv3.bind(this)
     }
 
 
-    toggleDiv = () => {
+    toggleDiv1 = () => {
+        const {show} = this.state;
+        this.setState({show: !show})
+    }
+    toggleDiv2 = () => {
+        const {show} = this.state;
+        this.setState({show: !show})
+    }
+    toggleDiv3 = () => {
         const {show} = this.state;
         this.setState({show: !show})
     }
@@ -39,9 +58,51 @@ class Aurochs extends React.Component {
                     <ModalBody>
                         <div>
                             <br />
-                            <button onClick={ this.toggleDiv }><img src={aurochs}/></button>
-                            <br /><br />
-                            { this.state.show && <Box /> }
+                            <div className="mt-5">
+                                <Nav tabs>
+                                    <NavItem >
+                                        <TabNavLink tag="div">
+                                            <NavLink
+                                                to={`/ruler`}
+                                                className="movie-tab rulerToggle"
+                                            >
+                                                src={ruler}
+                                            </NavLink>
+
+                                        </TabNavLink>
+                                    </NavItem>
+                                    <NavItem >
+                                        <TabNavLink tag="div">
+                                            <NavLink
+                                                to={`/aurochs`}
+                                                className="movie-tab aurochsToggle"
+                                            >
+                                                src={aurochs}
+                                            </NavLink>
+
+                                        </TabNavLink>
+                                    </NavItem>
+                                    <NavItem >
+                                        <TabNavLink tag="div">
+                                            <NavLink
+                                                to={`/movie`}
+                                                className="movie-tab movieToggle"
+                                            >
+                                                src={aurochs}
+                                            </NavLink>
+
+                                        </TabNavLink>
+                                    </NavItem>
+                                </Nav>
+
+                            </div>
+                            {/*<button onClick={ this.toggleDiv1 }><img className="rulerToggle" src={ruler}/></button>*/}
+                            {/*<button onClick={ this.toggleDiv2 }><img className="aurochsToggle" src={aurochs}/></button>*/}
+                            {/*<button onClick={ this.toggleDiv3 }><img className="movieToggle" src={aurochs}/></button>*/}
+                            {/*<br /><br />*/}
+                            {/*{ this.state.show && <Box /> }*/}
+                            {/*{ this.state.show && <Box /> }*/}
+                            {/*{ this.state.show && <Box /> }*/}
                         </div>
                     </ModalBody>
                     <ModalFooter>
