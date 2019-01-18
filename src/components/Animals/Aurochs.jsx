@@ -66,7 +66,7 @@ class Aurochs extends React.Component {
                                                 to={`/ruler`}
                                                 className="movie-tab rulerToggle"
                                             >
-                                                src={ruler}
+                                                <img className="rulerToggle" src={ruler}/>
                                             </NavLink>
 
                                         </TabNavLink>
@@ -77,7 +77,7 @@ class Aurochs extends React.Component {
                                                 to={`/aurochs`}
                                                 className="movie-tab aurochsToggle"
                                             >
-                                                src={aurochs}
+                                                <img className="aurochsToggle" src={aurochs}/>
                                             </NavLink>
 
                                         </TabNavLink>
@@ -88,7 +88,7 @@ class Aurochs extends React.Component {
                                                 to={`/movie`}
                                                 className="movie-tab movieToggle"
                                             >
-                                                src={aurochs}
+                                                <img className="movieToggle" src={aurochs} />
                                             </NavLink>
 
                                         </TabNavLink>
