@@ -19,7 +19,7 @@ function AurochTab() {
                 <NavItem >
                     <TabNavLink>
                         <NavLink
-                            to={`/ruler`}
+                            to="/ruler"
 
                         >
                             <img className="rulerToggle" src={ruler}/>
@@ -30,7 +30,7 @@ function AurochTab() {
                 <NavItem >
                     <TabNavLink>
                         <NavLink
-                            to={`/auroch`}
+                            to="/auroch"
 
                         >
                             <img className="aurochsToggle" src={aurochs}/>
@@ -41,7 +41,7 @@ function AurochTab() {
                 <NavItem >
                     <TabNavLink >
                         <NavLink
-                            to={`/movie`}
+                            to="/movie"
 
                         >
                             <img className="movieToggle" src={aurochs}/>

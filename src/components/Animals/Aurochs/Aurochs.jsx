@@ -14,7 +14,6 @@ import {
 
 import aurochs from "../../../images/aurochs.png";
 
-import AurochContent from "./AurochContent";
 import AurochTabs from "./AurochTabs";
 import Auroch from "./Auroch";
 import Ruler from "./Ruler";
@@ -51,15 +50,16 @@ class Aurochs extends React.Component {
                             <br/>
                             <AurochTabs/>
                             <Router>
+
                                 <Switch>
-                                    <AurochContent>
+
                                         <Route path="/auroch" component={Auroch}/>
                                         <Route path="/ruler" component={Ruler}/>
                                         <Route path="/cinema" component={Cinema}/>
-                                    </AurochContent>
-                                </Switch>
-                            </Router>
 
+                                </Switch>
+
+                            </Router>
                         </div>
                     </ModalBody>
                     <ModalFooter>
