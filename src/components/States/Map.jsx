@@ -4,7 +4,7 @@ import Seals from "../Animals/Seal";
 import Aurochs from "../Animals/Aurochs/Aurochs";
 import Deers from "../Animals/Deer/Deers";
 import Bears from "../Animals/Bear";
-import Foxes from "../Animals/Fox";
+import Foxes from "../Animals/Fox/Foxes";
 import Eagles from "../Animals/Eagle/Eagles";
 
 import map from "../../images/map.jpg";
