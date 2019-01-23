@@ -1,11 +1,11 @@
 import React from 'react';
-import Bream from '../Animals/Bream'
-import Seal from "../Animals/Seal";
+import Breams from '../Animals/Bream'
+import Seals from "../Animals/Seal";
 import Aurochs from "../Animals/Aurochs/Aurochs";
-import Deer from "../Animals/Deer";
-import Bear from "../Animals/Bear";
-import Fox from "../Animals/Fox";
-import Eagle from "../Animals/Eagle";
+import Deers from "../Animals/Deer";
+import Bears from "../Animals/Bear";
+import Foxes from "../Animals/Fox";
+import Eagles from "../Animals/Eagle/Eagles";
 
 import map from "../../images/map.jpg";
 
@@ -18,13 +18,13 @@ export default class Map extends React.Component {
             <div className="Welcome">
                 <header className="Welcome-header">
                     <img src={map} className="map" alt="map"/>
-                    <Bream/>
-                    <Seal/>
+                    <Breams/>
+                    <Seals/>
                     <Aurochs/>
-                    <Deer/>
-                    <Bear/>
-                    <Fox/>
-                    <Eagle/>
+                    <Deers/>
+                    <Bears/>
+                    <Foxes/>
+                    <Eagles/>
                 </header>
             </div>
         );
