@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 import fox from "../../../images/fox.png";
-import FoxesTabs from "../Eagle/Eagles";
+import FoxesTabs from "../Fox/FoxTabs";
 
 
 class Foxes extends React.Component {
