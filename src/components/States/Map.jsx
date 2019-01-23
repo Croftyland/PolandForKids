@@ -2,7 +2,7 @@ import React from 'react';
 import Breams from '../Animals/Bream/Breams'
 import Seals from "../Animals/Seal";
 import Aurochs from "../Animals/Aurochs/Aurochs";
-import Deers from "../Animals/Deer";
+import Deers from "../Animals/Deer/Deers";
 import Bears from "../Animals/Bear";
 import Foxes from "../Animals/Fox";
 import Eagles from "../Animals/Eagle/Eagles";
