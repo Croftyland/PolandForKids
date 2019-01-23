@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 import bream from "../../../images/bream.png";
-import BreamTabs from "../Bream/BreamsTabs";
+import BreamsTabs from "../Bream/BreamsTab";
 
 
 class Breams extends React.Component {
@@ -30,7 +30,7 @@ class Breams extends React.Component {
                     <ModalBody>
                         <div>
                             <br/>
-                            <BreamTabs/>
+                            <BreamsTabs/>
                         </div>
                     </ModalBody>
                     <ModalFooter>
