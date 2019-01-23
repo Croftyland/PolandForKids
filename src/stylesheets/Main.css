@@ -264,3 +264,29 @@ label {
  .movieToggle{
     width: 200px
 }
+
+ .cinemaPlay{
+     height: 474px;
+ }
+
+.baby{
+    width: 536px;
+    height: auto;
+    margin-left: 39px;
+}
+
+.compare{
+    width: 536px;
+    height: auto;
+    margin-left: 39px;
+}
+
+.mdc-typography--body{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.cinemaToggle {
+    margin-top: 74px;
+    width: 200px;
+}

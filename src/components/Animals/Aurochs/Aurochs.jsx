@@ -41,25 +41,15 @@ class Aurochs extends React.Component {
 
     render() {
         return (
+
             <div>
                 <img src={aurochs} className="aurochs" alt="aurochs" onClick={this.toggle}/>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-                    <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+                    <ModalHeader toggle={this.toggle}>Witam</ModalHeader>
                     <ModalBody>
                         <div>
                             <br/>
                             <AurochTabs/>
-                            <Router>
-
-                                <Switch>
-
-                                        <Route path="/auroch" component={Auroch}/>
-                                        <Route path="/ruler" component={Ruler}/>
-                                        <Route path="/cinema" component={Cinema}/>
-
-                                </Switch>
-
-                            </Router>
                         </div>
                     </ModalBody>
                     <ModalFooter>
