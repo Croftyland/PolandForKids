@@ -8,17 +8,9 @@ import {
 } from 'reactstrap';
 
 
-import {
-    BrowserRouter as Router, Route, Switch
-} from "react-router-dom";
-
 import aurochs from "../../../images/aurochs.png";
 
 import AurochTabs from "./AurochTabs";
-import Auroch from "./Auroch";
-import Ruler from "./Ruler";
-import Cinema from "./Cinema";
-
 
 class Aurochs extends React.Component {
     constructor(props) {

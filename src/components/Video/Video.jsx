@@ -9,7 +9,7 @@ export default class Video extends Component {
                 className='react-player'
                 playing
                 width='100%'
-                height='100%'
+                height='80%'
             />
         </div>
     }
