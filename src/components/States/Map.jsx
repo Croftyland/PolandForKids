@@ -3,7 +3,7 @@ import Breams from '../Animals/Bream/Breams'
 import Seals from "../Animals/Seal";
 import Aurochs from "../Animals/Aurochs/Aurochs";
 import Deers from "../Animals/Deer/Deers";
-import Bears from "../Animals/Bear";
+import Bears from "../Animals/Bear/Bears";
 import Foxes from "../Animals/Fox/Foxes";
 import Eagles from "../Animals/Eagle/Eagles";
 
