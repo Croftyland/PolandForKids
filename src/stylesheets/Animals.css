@@ -1,0 +1,199 @@
+.map {
+    background-repeat: no-repeat;
+    background-position: right top;
+    width: 1000px;
+}
+
+.bream {
+    position: absolute;
+    top: 389px;
+    right: 843px;
+    width: 203px;
+    height: auto;
+}
+
+.seal {
+    position: absolute;
+    top: 89px;
+    left: 765px;
+    width: 277px;
+    height: auto;
+}
+
+.aurochs {
+    position: absolute;
+    top: 120px;
+    right: 654px;
+    width: 277px;
+    height: auto;
+}
+
+.deer {
+    position: absolute;
+    top: 256px;
+    right: 654px;
+    width: 153px;
+    height: auto;
+}
+
+.bear {
+    position: absolute;
+    bottom: 170px;
+    right: 620px;
+    width: 186px;
+    height: auto;
+}
+
+.fox {
+    position: absolute;
+    bottom: 179px;
+    left: 792px;
+    width: 213px;
+    height: auto;
+}
+
+
+.eagle {
+    position: absolute;
+    top: 258px;
+    left: 627px;
+    width: 254px;
+    height: auto;
+}
+
+
+@media screen and (max-width: 880px) {
+
+    .map {
+        background-repeat: no-repeat;
+        background-position: right top;
+        width: 807px;
+    }
+
+    .bream {
+        position: absolute;
+        top: 326px;
+        right: 574px;
+        width: 173px;
+        height: auto;
+    }
+
+    .seal {
+        position: absolute;
+        top: 89px;
+        left: 465px;
+        width: 222px;
+        height: auto;
+    }
+
+    .aurochs {
+        position: absolute;
+        top: 120px;
+        right: 420px;
+        width: 222px;
+        height: auto;
+    }
+
+    .deer {
+        position: absolute;
+        top: 256px;
+        right: 421px;
+        width: 125px;
+        height: auto;
+    }
+
+    .bear {
+        position: absolute;
+        bottom: 170px;
+        right: 421px;
+        width: 180px;
+        height: auto;
+    }
+
+    .fox {
+        position: absolute;
+        bottom: 179px;
+        left: 515px;
+        width: 184px;
+        height: auto;
+    }
+
+
+    .eagle {
+        position: absolute;
+        top: 213px;
+        left: 373px;
+        width: 220px;
+        height: auto;
+    }
+
+
+}
+
+/*@media screen and (min-width: 880px) {*/
+
+    /*.map {*/
+        /*background-repeat: no-repeat;*/
+        /*background-position: right top;*/
+        /*width: 1000px;*/
+    /*}*/
+
+    /*.bream {*/
+        /*position: absolute;*/
+        /*top: 389px;*/
+        /*right: 843px;*/
+        /*width: 203px;*/
+        /*height: auto;*/
+    /*}*/
+
+    /*.seal {*/
+        /*position: absolute;*/
+        /*top: 89px;*/
+        /*left: 765px;*/
+        /*width: 277px;*/
+        /*height: auto;*/
+    /*}*/
+
+    /*.aurochs {*/
+        /*position: absolute;*/
+        /*top: 120px;*/
+        /*right: 654px;*/
+        /*width: 277px;*/
+        /*height: auto;*/
+    /*}*/
+
+    /*.deer {*/
+        /*position: absolute;*/
+        /*top: 256px;*/
+        /*right: 654px;*/
+        /*width: 153px;*/
+        /*height: auto;*/
+    /*}*/
+
+    /*.bear {*/
+        /*position: absolute;*/
+        /*bottom: 170px;*/
+        /*right: 620px;*/
+        /*width: 186px;*/
+        /*height: auto;*/
+    /*}*/
+
+    /*.fox {*/
+        /*position: absolute;*/
+        /*bottom: 179px;*/
+        /*left: 792px;*/
+        /*width: 213px;*/
+        /*height: auto;*/
+    /*}*/
+
+
+    /*.eagle {*/
+        /*position: absolute;*/
+        /*top: 258px;*/
+        /*left: 627px;*/
+        /*width: 254px;*/
+        /*height: auto;*/
+    /*}*/
+
+
+/*}*/
