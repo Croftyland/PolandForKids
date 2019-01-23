@@ -2,11 +2,12 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 
-import seal from "../../images/seal.png";
+import seal from "../../../images/seal.png";
+import SealsTab from "../Seal/SealsTab";
 
 
 
-class Seal extends React.Component {
+class Seals extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -27,12 +28,16 @@ class Seal extends React.Component {
             <div>
                 <img src={seal} className="seal" alt="seal" onClick={this.toggle}/>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-                    <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+                    <ModalHeader toggle={this.toggle}>Witam</ModalHeader>
                     <ModalBody>
-
+                        <div>
+                            <br/>
+                            <SealsTab/>
+                        </div>
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="primary" onClick={this.toggle}>Cancel</Button>
+                        <Button color="secondary" onClick={this.toggle}>
+                            Wyjść</Button>
                     </ModalFooter>
                 </Modal>
             </div>
@@ -40,4 +45,4 @@ class Seal extends React.Component {
     }
 }
 
-export default Seal;
+export default Seals;
