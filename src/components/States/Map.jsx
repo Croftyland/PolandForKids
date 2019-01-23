@@ -1,5 +1,5 @@
 import React from 'react';
-import Breams from '../Animals/Bream'
+import Breams from '../Animals/Bream/Breams'
 import Seals from "../Animals/Seal";
 import Aurochs from "../Animals/Aurochs/Aurochs";
 import Deers from "../Animals/Deer";
