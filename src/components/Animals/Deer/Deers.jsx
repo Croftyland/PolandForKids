@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 import deer from "../../../images/deer.png";
-import DeerTabs from "../Eagle/DeerTabs";
+import DeerTabs from "../Deer/DeerTabs";
 
 
 class Deers extends React.Component {
