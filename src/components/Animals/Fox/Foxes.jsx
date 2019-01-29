@@ -3,7 +3,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 import fox from "../../../images/fox.png";
 import FoxesTabs from "../Fox/FoxTabs";
-
+import ReactPlayer from 'react-player'
 
 class Foxes extends React.Component {
     constructor(props) {
@@ -27,6 +27,12 @@ class Foxes extends React.Component {
                 <img src={fox} className="fox" alt="fox" onClick={this.toggle}/>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>Witam</ModalHeader>
+                    <ReactPlayer
+                        url='https://www.youtube.com/watch?v=Kg4i0oYbOB0&feature=youtu.be'
+                        style={{ display:'none' }}
+                        width='0%'
+                        height='0%'
+                        playing/>
                     <ModalBody>
                         <div>
                             <br/>

@@ -3,7 +3,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 import deer from "../../../images/deer.png";
 import DeerTabs from "../Deer/DeerTabs";
-
+import ReactPlayer from 'react-player'
 
 class Deers extends React.Component {
     constructor(props) {
@@ -26,6 +26,12 @@ class Deers extends React.Component {
             <div>
                 <img src={deer} className="deer" alt="deer" onClick={this.toggle}/>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+                    <ReactPlayer
+                        url='https://www.youtube.com/watch?v=tx4QHEBYsO8&feature=youtu.be'
+                        style={{ display:'none' }}
+                        width='0%'
+                        height='0%'
+                        playing/>
                     <ModalHeader toggle={this.toggle}>Witam</ModalHeader>
                     <ModalBody>
                         <div>
