@@ -1,17 +1,23 @@
-import React, {Component} from 'react'
-import ReactPlayer from 'react-player'
+import React, {Component} from 'react';
+import { Media, Player, controls } from 'react-media-player'
+const { PlayPause} = controls
 
-export default class Video extends Component {
+
+
+export default class App extends Component {
     render() {
-        return <div className='player-wrapper'>
-            <ReactPlayer
-                url='https://www.youtube.com/watch?v=plug6OIrxRM'
-                className='react-player'
-                playing
-                width='100%'
-                height='80%'
-            />
-        </div>
+        return (
+            <Media>
+                <div className="media">
+                    <div className="media-player">
+                        <Player src="http://www.youtube.com/embed/h3YVKTxTOgU" />
+                    </div>
+                    <div>
+                        <PlayPause className="media-controls" />
+                    </div>
+                </div>
+            </Media>
+        )
     }
 }
 
