@@ -3,7 +3,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 import bream from "../../../images/bream.png";
 import BreamsTabs from "../Bream/BreamsTab";
-import ReactPlayer from 'react-player'
+
 
 class Breams extends React.Component {
     constructor(props) {
@@ -27,12 +27,6 @@ class Breams extends React.Component {
                 <img src={bream} className="bream" alt="bream" onClick={this.toggle}/>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>Witam</ModalHeader>
-                    <ReactPlayer
-                        url='https://www.youtube.com/watch?v=aUYYz9s1o3o&feature=youtu.be'
-                        style={{ display:'none' }}
-                        width='0%'
-                        height='0%'
-                        playing/>
                     <ModalBody>
                         <div>
                             <br/>

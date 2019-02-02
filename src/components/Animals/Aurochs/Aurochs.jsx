@@ -11,7 +11,7 @@ import {
 import aurochs from "../../../images/aurochs.png";
 
 import AurochTabs from "./AurochTabs";
-import ReactPlayer from 'react-player'
+
 
 class Aurochs extends React.Component {
     constructor(props) {
@@ -39,12 +39,7 @@ class Aurochs extends React.Component {
                 <img src={aurochs} className="aurochs" alt="aurochs" onClick={this.toggle}/>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>Witam</ModalHeader>
-                    <ReactPlayer
-                    url='https://www.youtube.com/watch?v=coNE8-uQvEA&feature=youtu.be'
-                    style={{ display:'none' }}
-                    width='0%'
-                    height='0%'
-                    playing/>
+
                     <ModalBody>
                         <div>
                             <br/>

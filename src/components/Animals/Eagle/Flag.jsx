@@ -1,13 +1,18 @@
 import React from 'react';
 import flagEagle from '../../../images/flagEagle.png'
+import ReactPlayer from 'react-player'
 
 function Flag() {
     return (
         <main className="content">
             <img className="baby" src={flagEagle}/>
-            <p className="mdc-typography--body">Orzeł pojawia się w wielu miejscach. Czy przypomina Ci się może jakiś z
-                takich przedmiotów, na których możesz mnie zobaczyć? Użyj flagi Polski jako wskazówki. Kliknij tutaj aby
-                przekonać się czy masz rację!</p>
+            <ReactPlayer
+                url='https://www.youtube.com/watch?v=TOuIRZrGnHo'
+                style={{ display:'none' }}
+                width='0%'
+                height='0%'
+                playing/>
+            <p className="mdc-typography--body">Taak, jestem symbolem Polski i występuje na jej godle.</p>
         </main>
     );
 }
