@@ -1,12 +1,18 @@
 import React from 'react';
 import Breams from '../Animals/Bream/Breams'
+import VideoBream from "../Video/VideoBream"
 import Seals from "../Animals/Seal/Seals";
+import VideoSeal from "../Video/VideoSeal"
 import Aurochs from "../Animals/Aurochs/Aurochs";
+import VideoAurochs from "../Video/VideoAurochs"
 import Deers from "../Animals/Deer/Deers";
+import VideoDeer from "../Video/VideoDeer"
 import Bears from "../Animals/Bear/Bears";
+import VideoBear from "../Video/VideoBear"
 import Foxes from "../Animals/Fox/Foxes";
+import VideoFox from "../Video/VideoFox"
 import Eagles from "../Animals/Eagle/Eagles";
-import ReactPlayer from 'react-player'
+import VideoEagle from "../Video/VideoEagle"
 
 import map from "../../images/map.jpg";
 
@@ -18,20 +24,21 @@ export default class Map extends React.Component {
 
             <div className="Welcome">
                 <header className="Welcome-header">
-                    <ReactPlayer
-                        url='https://www.youtube.com/watch?v=x__eToraZ6s&feature=youtu.be'
-                        style={{ display:'none' }}
-                        width='0%'
-                        height='0%'
-                        playing/>
                     <img src={map} className="map" alt="map"/>
                     <Breams/>
+                    <VideoBream/>
                     <Seals/>
+                    <VideoSeal/>
                     <Aurochs/>
+                    <VideoAurochs/>
                     <Deers/>
+                    <VideoDeer/>
                     <Bears/>
+                    <VideoBear/>
                     <Foxes/>
+                    <VideoFox/>
                     <Eagles/>
+                    <VideoEagle/>
                 </header>
             </div>
         );

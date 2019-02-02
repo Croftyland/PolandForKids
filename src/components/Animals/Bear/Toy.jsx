@@ -1,6 +1,5 @@
 import React from 'react';
 import teddy from '../../../images/TeddyBear.jpg'
-import ReactPlayer from "./Bears";
 import ReactPlayer from 'react-player'
 
 function Toy() {
