@@ -24,7 +24,7 @@ class MainForm extends Component {
                 years: false,
                 city: false
             },
-            activeStep: 5,
+            activeStep: 1,
             isDisablePrevBtn: true,
             isDisableNextBtn: true
         }
