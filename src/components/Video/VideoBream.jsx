@@ -4,13 +4,13 @@ const { PlayPause} = controls
 
 
 
-export default class App extends Component {
+export default class VideoBream extends Component {
     render() {
         return (
             <Media>
                 <div className="media">
                     <div className="media-player">
-                        <Player src="http://www.youtube.com/embed/h3YVKTxTOgU" />
+                        <Player src="https://www.youtube.com/watch?v=ix1W_YV5cXM&feature=youtu.be" />
                     </div>
                     <div>
                         <PlayPause className="media-controls" />
