@@ -9,11 +9,11 @@ export default class VideoSeal extends Component {
         return (
             <Media>
                 <div className="media">
-                    <div className="media-player">
+                    <div className="media-player" style={{display:'none'}}>
                         <Player src="https://www.youtube.com/watch?v=Gv-URJicdjo&feature=youtu.be" />
                     </div>
                     <div>
-                        <PlayPause className="media-controls" />
+                        <PlayPause className="media-controls" style={{position: 'absolute', left: '54px', top: '359px'}} />
                     </div>
                 </div>
             </Media>

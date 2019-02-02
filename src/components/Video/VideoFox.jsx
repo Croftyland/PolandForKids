@@ -9,11 +9,11 @@ export default class VideoFox extends Component {
         return (
             <Media>
                 <div className="media">
-                    <div className="media-player">
+                    <div className="media-player" style={{display:'none'}}>
                         <Player src="https://www.youtube.com/watch?v=dCEVFSkvAV0&feature=youtu.be" />
                     </div>
                     <div>
-                        <PlayPause className="media-controls" />
+                        <PlayPause className="media-controls" style={{position: 'absolute', left: '54px', top: '579px'}} />
                     </div>
                 </div>
             </Media>

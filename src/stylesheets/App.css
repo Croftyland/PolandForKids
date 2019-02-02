@@ -37,3 +37,26 @@
 .mapPlay{
     position: absolute;
 }
+
+.button, .media-controls{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #f4511e;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.button, .media-controls:hover {background-color: #f41d21}
+
+.button, .media-controls:active {
+    background-color: #f41d21;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
