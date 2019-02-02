@@ -13,7 +13,7 @@ export default class TabEagle1 extends Component {
                         <Player src="https://www.youtube.com/watch?v=-zq5bvCp4c8&feature=youtu.be" />
                     </div>
                     <div>
-                        <PlayPause className="media-controls" style={{position: 'absolute', left: '54px', top: '146px'}} />
+                        <PlayPause className="media-controls" style={{position: 'absolute', left: '31px',top: '30px'}} />
                     </div>
                 </div>
             </Media>

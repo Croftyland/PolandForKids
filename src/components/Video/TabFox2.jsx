@@ -13,7 +13,7 @@ export default class TabFox2 extends Component {
                         <Player src="https://www.youtube.com/watch?v=vDJw-e541hM&feature=youtu.be" />
                     </div>
                     <div>
-                        <PlayPause className="media-controls" style={{position: 'absolute', left: '54px', top: '146px'}} />
+                        <PlayPause className="media-controls" style={{position: 'absolute',left: '261px',top: '30px'}} />
                     </div>
                 </div>
             </Media>

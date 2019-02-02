@@ -5,6 +5,10 @@ import Ruler from "./Ruler"
 import Cinema from "./Cinema"
 import Auroch from "./Auroch"
 
+import TabAuroch1 from '../../Video/TabAuroch1'
+import TabAuroch2 from '../../Video/TabAuroch2'
+import TabAuroch3 from '../../Video/TabAuroch3'
+
 import { Link, Route, Switch,BrowserRouter } from "react-router-dom";
 
 import ruler from "../../../images/ruler.jpg";
@@ -57,6 +61,9 @@ export default class AurochTab extends React.Component {
         return (
             <BrowserRouter>
             <div className="mt-5">
+                <TabAuroch1/>
+                <TabAuroch2/>
+                <TabAuroch3/>
                 <Nav tabs>
                     <NavItem>
                         <Link to={`/ruler`}>

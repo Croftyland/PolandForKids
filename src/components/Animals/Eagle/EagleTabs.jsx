@@ -11,7 +11,9 @@ import tv from "../../../images/tv.jpg";
 import flag from "../../../images/flag_splash_poland.jpg";
 import eagle from "../../../images/eagle.png";
 
-
+import TabEagle1 from '../../Video/TabEagle1'
+import TabEagle2 from '../../Video/TabEagle2'
+import TabEagle3 from '../../Video/TabEagle3'
 
 export default class EagleTabs extends React.Component {
     constructor(props) {
@@ -57,6 +59,9 @@ export default class EagleTabs extends React.Component {
         return (
             <BrowserRouter>
                 <div className="mt-5">
+                    <TabEagle1/>
+                    <TabEagle2/>
+                    <TabEagle3/>
                     <Nav tabs>
                         <NavItem>
                             <Link to={`/tv`}>

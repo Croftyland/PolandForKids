@@ -13,7 +13,7 @@ export default class TabBream1 extends Component {
                         <Player src="https://www.youtube.com/watch?v=2bH-1N1IOA4&feature=youtu.be" />
                     </div>
                     <div>
-                        <PlayPause className="media-controls" style={{position: 'absolute', left: '54px', top: '146px'}} />
+                        <PlayPause className="media-controls" style={{position: 'absolute', left: '31px',top: '30px'}} />
                     </div>
                 </div>
             </Media>

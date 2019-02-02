@@ -11,7 +11,9 @@ import seals from "../../../images/seals.jpg";
 import boat from "../../../images/yaght.jpg";
 import seal from "../../../images/seal.png";
 
-
+import TabSeal1 from '../../Video/TabSeal1'
+import TabSeal2 from '../../Video/TabSeal2'
+import TabSeal3 from '../../Video/TabSeal3'
 
 export default class EagleTabs extends React.Component {
     constructor(props) {
@@ -57,6 +59,9 @@ export default class EagleTabs extends React.Component {
         return (
             <BrowserRouter>
                 <div className="mt-5">
+                    <TabSeal1/>
+                    <TabSeal2/>
+                    <TabSeal3/>
                     <Nav tabs>
                         <NavItem>
                             <Link to={`/video`}>

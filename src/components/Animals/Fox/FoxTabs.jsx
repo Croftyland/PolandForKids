@@ -11,7 +11,9 @@ import forest from "../../../images/forest.jpg";
 import internet from "../../../images/logo.png";
 import melody from "../../../images/melody.jpg";
 
-
+import TabFox1 from '../../Video/TabFox1'
+import TabFox2 from '../../Video/TabFox2'
+import TabFox3 from '../../Video/TabFox3'
 
 export default class EagleTabs extends React.Component {
     constructor(props) {
@@ -57,6 +59,9 @@ export default class EagleTabs extends React.Component {
         return (
             <BrowserRouter>
                 <div className="mt-5">
+                    <TabFox1/>
+                    <TabFox2/>
+                    <TabFox3/>
                     <Nav tabs>
                         <NavItem>
                             <Link to={`/melody`}>

@@ -8,7 +8,6 @@ function Boat() {
             <img className="baby" src={mapB}/>
             <ReactPlayer
                 url='https://www.youtube.com/watch?v=z_DadJbwejY'
-                style={{ display:'none' }}
                 width='0%'
                 height='0%'
                 playing/>

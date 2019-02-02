@@ -5,6 +5,10 @@ import Swim from "./Swim"
 import Elf from "./Elf"
 import Bream from "./Bream"
 
+import TabBream1 from '../../Video/TabBream1'
+import TabBream2 from '../../Video/TabBream2'
+import TabBream3 from '../../Video/TabBream3'
+
 import { Link, Route, Switch,BrowserRouter } from "react-router-dom";
 
 import swim from "../../../images/swimmers.jpg";
@@ -57,6 +61,9 @@ export default class BreamsTab extends React.Component {
         return (
             <BrowserRouter>
                 <div className="mt-5">
+                    <TabBream1/>
+                    <TabBream2/>
+                    <TabBream3/>
                     <Nav tabs>
                         <NavItem>
                             <Link to={`/swim`}>

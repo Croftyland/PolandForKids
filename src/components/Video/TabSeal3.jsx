@@ -13,7 +13,7 @@ export default class TabSeal3 extends Component {
                         <Player src="https://www.youtube.com/watch?v=ffNGy314CGo" />
                     </div>
                     <div>
-                        <PlayPause className="media-controls" style={{position: 'absolute', left: '54px', top: '146px'}} />
+                        <PlayPause className="media-controls" style={{position: 'absolute', left: '487px',top: '30px'}} />
                     </div>
                 </div>
             </Media>

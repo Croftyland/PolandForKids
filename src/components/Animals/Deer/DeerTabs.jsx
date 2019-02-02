@@ -11,7 +11,9 @@ import deer from "../../../images/deer.png";
 import book from "../../../images/books.jpg";
 import cinema from "../../../images/cinema.jpg";
 
-
+import TabDeer1 from '../../Video/TabDeer1'
+import TabDeer2 from '../../Video/TabDeer2'
+import TabDeer3 from '../../Video/TabDeer3'
 
 export default class DeerTabs extends React.Component {
     constructor(props) {
@@ -57,6 +59,9 @@ export default class DeerTabs extends React.Component {
         return (
             <BrowserRouter>
                 <div className="mt-5">
+                    <TabDeer1/>
+                    <TabDeer2/>
+                    <TabDeer3/>
                     <Nav tabs>
                         <NavItem>
                             <Link to={`/deer`}>

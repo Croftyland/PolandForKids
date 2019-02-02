@@ -5,6 +5,10 @@ import Toy from "./Toy"
 import Tel from "./Tel"
 import Bear from "./Bear"
 
+import TabBear1 from '../../Video/TabBear1'
+import TabBear2 from '../../Video/TabBear2'
+import TabBear3 from '../../Video/TabBear3'
+
 import { Link, Route, Switch,BrowserRouter } from "react-router-dom";
 
 import toy from "../../../images/toysShelf.jpg";
@@ -57,6 +61,9 @@ export default class BearTabs extends React.Component {
         return (
             <BrowserRouter>
                 <div className="mt-5">
+                    <TabBear1/>
+                    <TabBear2/>
+                    <TabBear3/>
                     <Nav tabs>
                         <NavItem>
                             <Link to={`/toy`}>

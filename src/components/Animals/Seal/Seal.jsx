@@ -7,7 +7,6 @@ function Boat() {
         <main className="content">
             <ReactPlayer
                 url='https://www.youtube.com/watch?v=pUg3FMyoq4E&feature=youtu.be'
-                style={{ display:'none' }}
                 width='0%'
                 height='0%'
                 playing/>
