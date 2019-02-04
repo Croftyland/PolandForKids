@@ -1,23 +1,26 @@
-import React, {Component} from 'react';
-import { Media, Player, controls } from 'react-media-player'
-const { PlayPause} = controls
+import React, {Component} from 'react'
+import ReactPlayer from 'react-player'
 
 
-
-export default class VideoAurochs extends Component {git
-    render() {
+export default class VideoAurochs3 extends Component {
+    constructor (props) {
+        super(props)
+        this.state = {
+            playing: false
+        }
+    }
+    render () {
         return (
-            <Media>
-                <div className="media">
-                    <div className="media-player" style={{display:'none'}}>
-                        <Player src="https://www.youtube.com/embed/1PDooBDr2oI" />
-                    </div>
-                    <div>
-                        <PlayPause className="media-controls" style={{position: 'absolute', left: '54px', top: '146px'}} />
-                    </div>
-                </div>
-            </Media>
+            <div>
+                <ReactPlayer
+                    url='https://www.youtube.com/watch?v=1PDooBDr2oI'
+                    playing={this.state.playing}
+                    style={{display:'none'}}
+                    onPlay={() => this.setState({ playing: true })}
+                    onPause={() => this.setState({ playing: false })}
+                />
+                <button className="media-controls" type="button"  style={{position: 'absolute', left: '54px', top: '135px'}}  onClick={() => this.setState({ playing: true })}>Play</button>
+            </div>
         )
     }
 }
-
