@@ -10,7 +10,7 @@ export default class VideoDeer extends Component {
             <Media>
                 <div className="media">
                     <div className="media-player" style={{display:'none'}}>
-                        <Player src="https://www.youtube.com/watch?v=8Mf8K5WrqJ8&feature=youtu.be" />
+                        <Player src="https://www.youtube.com/embed/8Mf8K5WrqJ8" />
                     </div>
                     <div>
                         <PlayPause className="media-controls" style={{position: 'absolute', left: '54px', top: '432px'}} />

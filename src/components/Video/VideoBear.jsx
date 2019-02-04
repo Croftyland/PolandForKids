@@ -10,7 +10,7 @@ export default class VideoBear extends Component {
             <Media>
                 <div className="media">
                     <div className="media-player" style={{display:'none'}}>
-                        <Player src="https://www.youtube.com/watch?v=CjZ4IAyElCg&feature=youtu.be" />
+                        <Player src="https://www.youtube.com/embed/CjZ4IAyElCg" />
                     </div>
                     <div>
                         <PlayPause className="media-controls" style={{position: 'absolute', left: '54px', top: '216px'}} />
