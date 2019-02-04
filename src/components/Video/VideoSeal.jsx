@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import ReactPlayer from 'react-player'
 
 
-export default class VideoDeer extends Component {
+export default class VideoSeal extends Component {
     constructor (props) {
         super(props)
         this.state = {

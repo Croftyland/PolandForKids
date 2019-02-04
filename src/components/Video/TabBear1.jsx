@@ -1,22 +1,27 @@
-import React, {Component} from 'react';
-import { Media, Player, controls } from 'react-media-player'
-const { PlayPause} = controls
-
+import React, {Component} from 'react'
+import ReactPlayer from 'react-player'
 
 
 export default class TabBear1 extends Component {
-    render() {
+    constructor (props) {
+        super(props)
+        this.state = {
+            playing: false
+        }
+    }
+    render () {
         return (
-            <Media>
-                <div className="media">
-                    <div className="media-player" style={{display:'none'}}>
-                        <Player src="https://www.youtube.com/watch?v=dhj6zMaj1mM&feature=youtu.be" />
-                    </div>
-                    <div>
-                        <PlayPause className="media-controls" style={{position: 'absolute', left: '31px',top: '30px'}} />
-                    </div>
-                </div>
-            </Media>
+            <div>
+                <ReactPlayer
+                    url='https://www.youtube.com/watch?v=dhj6zMaj1mM&feature=youtu.be'
+                    playing={this.state.playing}
+                    style={{display:'none'}}
+                    onPlay={() => this.setState({ playing: true })}
+                    onPause={() => this.setState({ playing: false })}
+                />
+                <button type="button"  className="media-controls" style={{position: 'absolute', left: '31px',top: '30px'}} onClick={() => this.setState({ playing: true })}>Play</button>
+            </div>
         )
     }
 }
+

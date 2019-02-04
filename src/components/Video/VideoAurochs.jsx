@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import ReactPlayer from 'react-player'
 
 
-export default class VideoAurochs3 extends Component {
+export default class VideoAurochs extends Component {
     constructor (props) {
         super(props)
         this.state = {
